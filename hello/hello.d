@@ -6,3 +6,4 @@ void main() {
     writeln("Hello, world!");
 }
 
+// EOF
