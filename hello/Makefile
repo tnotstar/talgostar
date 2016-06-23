@@ -5,17 +5,23 @@
 .DEFAULT: all
 .PHONY: all clean distclean
 
-all: hello_c
+LDLIBS = -lstdc++
+
+PROGRAMS = hello_c hello_cpp
+OBJECTS = hello_c.o hello_cpp.o
+
+all: $(PROGRAMS)
 
 clean:
-	-@$(RM) hello.o
+	-@$(RM) $(OBJECTS)
 
 distclean: clean
-	-@$(RM) hello_c
+	-@$(RM) $(PROGRAMS)
 
-hello_c : hello.o
-	$(CC) $(CFLAGS) $(LDFLAGS) -o $@ $<
+hello_c : hello_c.o
+hello_c.o : hello_c.c
 
-hello.o : hello.c
+hello_cpp : hello_cpp.o
+hello_cpp.o : hello_cpp.cpp
 
 # EOF

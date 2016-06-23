@@ -5,17 +5,23 @@
 .DEFAULT: all
 .PHONY: all clean distclean
 
-all: fizzbuzz_c
+LDLIBS = -lstdc++
+
+PROGRAMS = fizzbuzz_c fizzbuzz_cpp
+OBJECTS = fizzbuzz_c.o fizzbuzz_cpp.o
+
+all: $(PROGRAMS)
 
 clean:
-	-@$(RM) fizzbuzz.o
+	-@$(RM) $(OBJECTS)
 
 distclean: clean
-	-@$(RM) fizzbuzz_c
+	-@$(RM) $(PROGRAMS)
 
-fizzbuzz_c : fizzbuzz.o
-	$(CC) $(CFLAGS) $(LDFLAGS) -o $@ $<
+fizzbuzz_c : fizzbuzz_c.o
+fizzbuzz_c.o : fizzbuzz_c.c
 
-fizzbuzz.o : fizzbuzz.c
+fizzbuzz_cpp : fizzbuzz_cpp.o
+fizzbuzz_cpp.o : fizzbuzz_cpp.cpp
 
 # EOF
