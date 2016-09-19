@@ -4,7 +4,7 @@ Non-unique Elements
 Source
 ------
 
-This document has been stolen from https://checkio.org/mission/non-unique-elements/
+This document has been stolen from <https://py.checkio.org/mission/non-unique-elements/>
 
 > "If you have 50 different plug types, appliances wouldn't be available and would be very expensive. But once an electric outlet becomes standardized, many companies can design appliances, and competition ensues, creating variety and better prices for consumers." --Bill Gates
 
@@ -38,10 +38,8 @@ How it is used
 
 This mission will help you to understand how to manipulate arrays, something that is the basis for solving more complex tasks. The concept can be easily generalized for real world tasks. For example: if you need to clarify statistics by removing low frequency elements (noise).
 
-Precondition
-------------
+Precondition(s)
+---------------
 
-~~~~
-0 < len(data) < 1000
-~~~~
+  * `0 < len(data) < 1000`
 
