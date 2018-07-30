@@ -1,2 +1,2 @@
 # talgostar
-This is my personal repository for algorithms.
+This is my personal repository of algorithms.
